@@ -1,0 +1,1 @@
+pyinstaller --onefile -w -F --add-binary "setting.ico;." --icon=setting.ico GUI.py

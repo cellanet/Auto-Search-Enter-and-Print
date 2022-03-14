@@ -1,0 +1,11 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService # Similar thing for firefox also!
+from subprocess import CREATE_NO_WINDOW # This flag will only be available in windows
+
+# Define your own service object with the `CREATE_NO_WINDOW ` flag
+# If chromedriver.exe is not in PATH, then use:
+# ChromeService('/path/to/chromedriver')
+chrome_service = ChromeService('chromedriver')
+chrome_service.creationflags = CREATE_NO_WINDOW
+
+driver = webdriver.Chrome(service=chrome_service)
